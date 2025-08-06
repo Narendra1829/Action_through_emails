@@ -4,21 +4,21 @@ import '../index.css'
 
 const timesheetData = [
     {
-      date: '2025-07-14',
-      originalHours: 8,
-      updatedHours: 6,
-      taskDescription: 'Feature Development',
-      reason: 'Adjusted for actual work done'
+        date: '2025-07-14',
+        originalHours: 8,
+        updatedHours: 6,
+        taskDescription: 'Feature Development',
+        reason: 'Adjusted for actual work done'
     },
     {
-      date: '2025-07-15',
-      originalHours: 8,
-      updatedHours: 9,
-      taskDescription: 'Bug Fixing',
-      reason: 'Overtime logged'
+        date: '2025-07-15',
+        originalHours: 8,
+        updatedHours: 9,
+        taskDescription: 'Bug Fixing',
+        reason: 'Overtime logged'
     }
-  ];
-  
+];
+
 const TimeOffRequest = ({ onApprove }) => {
     return (
         <div className="request-container">
@@ -39,7 +39,7 @@ const TimeOffRequest = ({ onApprove }) => {
             <div className="section-summary">
                 <div className="timesheet-table-container">
                     <h3 id="timesheet-heading">Modified Timesheet Details</h3>
-                    <table className="timesheet-table" style={{marginBottom: '10px'}}>
+                    <table className="timesheet-table" style={{ marginBottom: '10px' }}>
                         <thead>
                             <tr>
                                 <th>Date</th>
@@ -70,7 +70,10 @@ const TimeOffRequest = ({ onApprove }) => {
             </div>
             <div className="actions">
                 <div className="buttons-request">
-                    <a href="#" className="link">Log in to view more details</a>
+                    {/* <a className="link">Log in to view more details</a> */}
+                    <button className="link" onClick={() => { /* future navigation or modal logic */ }}>
+                        Log in to view more details
+                    </button>
                     <div>
                         <button className="reject">Reject</button>
                         <button className="approve" onClick={onApprove}>Approve</button>
