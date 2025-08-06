@@ -70,10 +70,10 @@ const TimeOffRequest = ({ onApprove }) => {
             </div>
             <div className="actions">
                 <div className="buttons-request">
-                    {/* <a className="link">Log in to view more details</a> */}
-                    <button className="link" onClick={() => { /* future navigation or modal logic */ }}>
+                    <a className="link" href='/'>Log in to view more details</a>
+                    {/* <button className="link" >
                         Log in to view more details
-                    </button>
+                    </button> */}
                     <div>
                         <button className="reject">Reject</button>
                         <button className="approve" onClick={onApprove}>Approve</button>
