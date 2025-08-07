@@ -76,7 +76,7 @@ const TimeOffRequest = ({ onApprove }) => {
                     </button> */}
                     <div>
                         <button className="reject">Reject</button>
-                        <button className="approve" onClick={onApprove}>Approve</button>
+                        <button className="approve" onClick={onApprove} >Approve</button>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Confirmation.css';
 
 const Confirmation = () => {
+  const [message, setMessage] = useState('');
+
+  useEffect(() => {
+    setMessage('You have approved the timesheet update submitted by your manager.');
+  }, []);
+
   return (
     <div className="confirmation-container">
       <div style={{ display: 'flex' }}>
@@ -11,7 +17,7 @@ const Confirmation = () => {
                     <p className="subtitle m-0">You can close this tab</p>
                 </div>
             </div>
-      <p style={{background:'#e8f5e9', padding:'14px', borderRadius:'5px'}}>You have approved the timesheet update submitted by your manager.</p>
+      <p style={{background:'#e8f5e9', padding:'14px', borderRadius:'5px'}} aria-live="polite" role="status">{message}</p>
 
       <div className="buttons">
         <button className="close" onClick={()=>window.location.reload()}>Close tab</button>
