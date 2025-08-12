@@ -35,8 +35,6 @@ function AppContent() {
     setApproved(false);
     navigate('/login');
   };
-
-  console.log('hi');
   
   return (
     <Routes>
