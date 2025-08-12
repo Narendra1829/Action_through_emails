@@ -15,7 +15,7 @@ function AppContent() {
   useEffect(() => {
     const token = searchParams.get('token');
     
-    if (token === 'auto-login-123') {
+    if (token === 'ts-auth-7x9k2m') {
       localStorage.setItem('isAuthenticated', 'true');
       setIsAuthenticated(true);
       setTimeout(() => navigate('/timesheet'), 0);
@@ -54,7 +54,7 @@ function AppContent() {
         ) : <Navigate to="/login" />
       } />
       <Route path="/" element={
-        searchParams.get('token') === 'auto-login-123' ? 
+        searchParams.get('token') === 'ts-auth-7x9k2m' ? 
           <Navigate to="/timesheet" /> : 
           <Navigate to={isAuthenticated ? "/dashboard" : "/login"} />
       } />
